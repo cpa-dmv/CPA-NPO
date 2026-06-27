@@ -1,5 +1,5 @@
 /* =====================================================================
-   CPA Growth Foundation — Main Script (Vanilla ES6)
+   Business Growth Foundation — Main Script (Vanilla ES6)
    Sections:
      1. Helpers
      2. Page loader
@@ -58,77 +58,50 @@
   };
   const svg = (name, size = 24) => `<svg viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true">${icons[name] || ''}</svg>`;
 
+  /* Configuration (single source of truth) — falls back to {} if missing */
+  const CONFIG = window.SITE_CONFIG || {};
+
+  /* ============ 1b. BRAND INJECTION ============
+     Pull all branding from config so the site can be rebranded by editing
+     only js/config.js. Static HTML acts as a graceful no-JS fallback. */
+  function applyBrand() {
+    const b = CONFIG.brand;
+    if (!b) return;
+    if (b.name && b.tagline) document.title = `${b.name} — ${b.tagline}`;
+
+    const fill = (key, value) => {
+      if (value == null) return;
+      $$(`[data-brand="${key}"]`).forEach(el => { el.textContent = value; });
+    };
+    fill('name', b.name);
+    fill('primary', b.primary);
+    fill('secondary', b.secondary);
+    fill('tagline', b.tagline);
+
+    if (b.email) $$('[data-brand="email"]').forEach(el => { el.textContent = b.email; el.setAttribute('href', 'mailto:' + b.email); });
+    if (b.phone) $$('[data-brand="phone"]').forEach(el => { el.textContent = b.phone; el.setAttribute('href', 'tel:' + b.phone.replace(/[^0-9+]/g, '')); });
+
+    const modalTitle = $('#modalTitle');
+    if (modalTitle && b.name) modalTitle.textContent = `Join ${b.name}`;
+  }
+  applyBrand();
+
   /* ============ 2. PAGE LOADER ============ */
   window.addEventListener('load', () => {
     const loader = $('#loader');
     if (loader) setTimeout(() => loader.classList.add('is-hidden'), 500);
   });
 
-  /* ============ 3. DYNAMIC CONTENT ============ */
-  const programs = [
-    { icon: 'rocket', title: 'CPA Launch Program', desc: 'A step-by-step roadmap to launch your firm with confidence.' },
-    { icon: 'chart', title: 'Business Development', desc: 'Strategies to grow revenue and build a sustainable practice.' },
-    { icon: 'brush', title: 'Marketing & Branding', desc: 'Craft a memorable brand that attracts your ideal clients.' },
-    { icon: 'handshake', title: 'Sales & Client Acquisition', desc: 'Proven systems to win and retain quality clients.' },
-    { icon: 'code', title: 'Website Development', desc: 'A professional online presence built to convert visitors.' },
-    { icon: 'cap', title: 'Training & Development', desc: 'Continuous professional education and skills training.' },
-    { icon: 'users', title: 'Mentorship Program', desc: 'One-on-one guidance from seasoned firm owners.' },
-    { icon: 'chip', title: 'Technology & Innovation', desc: 'Modern tools and automation to run a leaner firm.' },
-    { icon: 'library', title: 'Resource Center', desc: '100+ templates, SOPs, and toolkits ready to use.' },
-    { icon: 'network', title: 'Networking & Community', desc: 'Connect with peers who share your ambitions.' },
-    { icon: 'referral', title: 'Referral Network', desc: 'Exchange warm referrals across the community.' },
-    { icon: 'box', title: 'Vendor Partnerships', desc: 'Exclusive deals from trusted industry partners.' },
-    { icon: 'talent', title: 'Talent Development', desc: 'Build, hire, and retain a high-performing team.' },
-    { icon: 'crown', title: 'Leadership Academy', desc: 'Develop the leadership skills to scale your firm.' },
-    { icon: 'heart', title: 'Wellness Program', desc: 'Resources to support a balanced, sustainable career.' },
-    { icon: 'bulb', title: 'Research & Insights', desc: 'Data-driven trends shaping the profession.' },
-    { icon: 'globe', title: 'Community Outreach', desc: 'Give back through local service and education.' },
-    { icon: 'gift', title: 'Scholarships & Grants', desc: 'Funding support for emerging CPAs and firms.' },
-    { icon: 'award', title: 'Recognition & Awards', desc: 'Celebrating excellence across our community.' },
-    { icon: 'calendar', title: 'Annual Events', desc: 'Conferences, galas, and gatherings all year long.' }
-  ];
-
-  const webdev = [
-    { icon: 'brush', title: 'Professional Website Design', desc: 'Beautiful, on-brand designs tailored to your firm.' },
-    { icon: 'code', title: 'Website Development', desc: 'Fast, secure, and modern websites built to last.' },
-    { icon: 'seo', title: 'SEO Optimization', desc: 'Rank higher and get found by local clients.' },
-    { icon: 'server', title: 'Hosting Guidance', desc: 'Reliable hosting recommendations and setup help.' },
-    { icon: 'mail', title: 'Business Email Setup', desc: 'Professional email on your own domain.' },
-    { icon: 'pin', title: 'Google Business Profile', desc: 'Optimized local listing to drive discovery.' },
-    { icon: 'chart', title: 'Analytics Setup', desc: 'Track visitors and measure what matters.' },
-    { icon: 'form', title: 'Contact Forms', desc: 'Capture leads with smart, secure forms.' },
-    { icon: 'page', title: 'Landing Pages', desc: 'High-converting pages for your services.' },
-    { icon: 'globe', title: 'Mobile Responsive Design', desc: 'Flawless experience on every device.' },
-    { icon: 'gauge', title: 'Performance Optimization', desc: 'Lightning-fast load times that retain visitors.' },
-    { icon: 'server', title: 'Maintenance Guidance', desc: 'Keep your site secure and up to date.' }
-  ];
-
-  const partners = [
-    { icon: 'chip', name: 'Accounting Software' }, { icon: 'chart', name: 'National Bank' },
-    { icon: 'heart', name: 'Insurance Group' }, { icon: 'cap', name: 'State University' },
-    { icon: 'code', name: 'Tech Solutions' }, { icon: 'box', name: 'Payroll Co.' },
-    { icon: 'globe', name: 'Cloud Systems' }, { icon: 'handshake', name: 'Advisory Partners' }
-  ];
-
-  const resources = [
-    { icon: 'doc', title: 'Engagement Letters', desc: 'Ready-to-use, attorney-informed templates.' },
-    { icon: 'library', title: 'SOP Templates', desc: 'Standardize your firm operations fast.' },
-    { icon: 'brush', title: 'Marketing Kits', desc: 'Logos, social posts, and brand assets.' },
-    { icon: 'form', title: 'Business Checklists', desc: 'Never miss a step launching or onboarding.' },
-    { icon: 'box', title: 'Toolkits', desc: 'Curated tools for every stage of growth.' },
-    { icon: 'page', title: 'Proposal Templates', desc: 'Win more work with polished proposals.' },
-    { icon: 'chart', title: 'Pricing Guides', desc: 'Confidently price your services.' },
-    { icon: 'cap', title: 'Resource Library', desc: 'Explore the full member library.' }
-  ];
-
-  const faqs = [
-    { q: 'Who can join CPA Growth Foundation?', a: 'Any new or growing CPA firm, individual CPA, mentor, volunteer, or corporate partner who shares our mission is welcome to apply.' },
-    { q: 'Is membership free?', a: 'We offer accessible membership options designed for firms at every stage. Many of our core resources and programs are available to members at no cost thanks to our partners and donors.' },
-    { q: 'How does the mentorship program work?', a: 'After applying, you are thoughtfully matched with an experienced mentor based on your goals. You meet regularly and gain access to member-only sessions and resources.' },
-    { q: 'What does the Website Development Program include?', a: 'Everything from professional design and development to SEO, hosting guidance, business email, analytics, and ongoing maintenance support.' },
-    { q: 'How can my company become a partner?', a: 'Corporate partners gain visibility with thousands of firms while supporting our mission. Apply through the membership section and our team will reach out.' },
-    { q: 'Where are events held?', a: 'We host events nationally and virtually throughout the year — from conferences and networking mixers to family days and our annual awards gala.' }
-  ];
+  /* ============ 3. DYNAMIC CONTENT ============
+     Content is sourced from js/config.js (SITE_CONFIG). The arrays below
+     are fallback defaults used only if the config file fails to load. */
+  const programs = CONFIG.programs || [];
+  const webdev = CONFIG.webdev || [];
+  const partners = CONFIG.partners || [];
+  const resources = CONFIG.resources || [];
+  const events = CONFIG.events || [];
+  const testimonials = CONFIG.testimonials || [];
+  const faqs = CONFIG.faqs || [];
 
   function buildPrograms() {
     const grid = $('#programsGrid');
@@ -172,6 +145,29 @@
       </article>`).join('');
   }
 
+  function buildEvents() {
+    const grid = $('#eventsGrid');
+    if (!grid) return;
+    grid.innerHTML = events.map(e => `
+      <article class="glass-card event-card reveal">
+        <div class="event-card__date"><span class="event-card__day">${e.day}</span><span class="event-card__mon">${e.mon}</span></div>
+        <div class="event-card__body"><span class="tag">${e.tag}</span><h3>${e.title}</h3><p>${e.desc}</p><span class="event-card__meta">${e.meta}</span></div>
+      </article>`).join('');
+  }
+
+  function buildStories() {
+    const grid = $('#storiesGrid');
+    if (!grid) return;
+    grid.innerHTML = testimonials.map(t => `
+      <article class="glass-card story-card reveal">
+        <div class="story-card__video" role="img" aria-label="Video testimonial placeholder">
+          <button class="story-card__play" aria-label="Play testimonial"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
+        </div>
+        <p class="story-card__quote">"${t.quote}"</p>
+        <div class="story-card__author"><span class="avatar">${t.initials}</span><div><b>${t.name}</b><small>${t.role}</small></div></div>
+      </article>`).join('');
+  }
+
   function buildFaq() {
     const acc = $('#accordion');
     if (!acc) return;
@@ -204,7 +200,7 @@
     });
   }
 
-  buildPrograms(); buildWebdev(); buildPartners(); buildResources(); buildFaq();
+  buildPrograms(); buildWebdev(); buildPartners(); buildResources(); buildEvents(); buildStories(); buildFaq();
 
   /* ============ 4. NAVIGATION ============ */
   const nav = $('#nav');
@@ -251,14 +247,14 @@
   /* ============ 5. THEME TOGGLE ============ */
   const themeToggle = $('#themeToggle');
   const root = document.documentElement;
-  const savedTheme = localStorage.getItem('cpa-theme');
+  const savedTheme = localStorage.getItem('bgf-theme');
   if (savedTheme) root.setAttribute('data-theme', savedTheme);
   else if (window.matchMedia('(prefers-color-scheme: dark)').matches) root.setAttribute('data-theme', 'dark');
 
   themeToggle.addEventListener('click', () => {
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
-    localStorage.setItem('cpa-theme', next);
+    localStorage.setItem('bgf-theme', next);
   });
 
   /* ============ 6. SCROLL PROGRESS + BACK TO TOP ============ */
@@ -315,7 +311,7 @@
   /* ============ 9. TYPING EFFECT ============ */
   const typedEl = $('#typed');
   if (typedEl && !prefersReduced) {
-    const phrases = ['mentorship.', 'proven programs.', 'a generous community.', 'real resources.'];
+    const phrases = (CONFIG.typedPhrases && CONFIG.typedPhrases.length) ? CONFIG.typedPhrases : ['mentorship.', 'proven programs.', 'a generous community.', 'real resources.'];
     let pi = 0, ci = 0, deleting = false;
     const tick = () => {
       const word = phrases[pi];
@@ -374,7 +370,7 @@
       modalSub.textContent = 'Complete the form and our team will reach out shortly.';
       if (roleSelect) roleSelect.value = role;
     } else {
-      modalTitle.textContent = 'Join CPA Growth Foundation';
+      modalTitle.textContent = `Join ${(CONFIG.brand && CONFIG.brand.name) || 'Us'}`;
       modalSub.textContent = 'Complete the form and our team will reach out shortly.';
     }
     setTimeout(() => $('#m-name').focus(), 100);
@@ -448,11 +444,11 @@
   const popupForm = $('#popupForm');
   const closePopup = () => { popup.classList.remove('is-open'); popup.setAttribute('aria-hidden', 'true'); };
 
-  if (!sessionStorage.getItem('cpa-popup-seen')) {
+  if (!sessionStorage.getItem('bgf-popup-seen')) {
     setTimeout(() => {
       popup.classList.add('is-open');
       popup.setAttribute('aria-hidden', 'false');
-      sessionStorage.setItem('cpa-popup-seen', '1');
+      sessionStorage.setItem('bgf-popup-seen', '1');
     }, 9000);
   }
   popupClose.addEventListener('click', closePopup);

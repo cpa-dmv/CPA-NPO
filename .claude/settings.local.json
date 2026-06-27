@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find . -type f -not -path '*/\\\\.*')"
+      "Bash(find . -type f -not -path '*/\\\\.*')",
+      "Bash(node -c js/config.js)",
+      "Bash(node -c js/script.js)"
     ]
   }
 }
