@@ -23,6 +23,7 @@ window.SITE_CONFIG = {
 
   /* ---- Core Programs ---- */
   programs: [
+    { icon: 'award', title: 'Google Reviews Management', desc: 'Build and protect your online reputation — get more 5-star reviews, respond professionally, and rank higher on Google Search and Maps.' },
     { icon: 'rocket', title: 'Business Launch Program', desc: 'Business planning, registration guidance, and a clear startup roadmap to launch with confidence.' },
     { icon: 'chart', title: 'Business Development', desc: 'Growth strategy, operations improvement, scaling support, and performance coaching.' },
     { icon: 'brush', title: 'Marketing & Branding', desc: 'Brand identity, social media, content, email, SEO, lead generation, and advertising guidance.' },
