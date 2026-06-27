@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A4D8C" />
+  <title>CPA Growth Foundation — Empowering CPA Firms to Start, Grow &amp; Succeed</title>
+  <meta name="description" content="CPA Growth Foundation is a nonprofit dedicated to helping new and growing CPA firms start, grow, and succeed through mentorship, programs, resources, and community." />
+  <meta name="keywords" content="CPA, accounting firms, nonprofit, mentorship, CPA growth, accounting professionals, firm development" />
+  <meta name="author" content="CPA Growth Foundation" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CPA Growth Foundation" />
+  <meta property="og:description" content="Empowering CPA Firms to Start, Grow &amp; Succeed." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "CPA Growth Foundation",
+    "description": "Empowering CPA Firms to Start, Grow & Succeed.",
+    "slogan": "Empowering CPA Firms to Start, Grow & Succeed."
+  }
+  </script>
+</head>
+<body>
+  <!-- ===== PAGE LOADER ===== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <svg class="loader__logo" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+        <circle cx="32" cy="32" r="28" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linecap="round" stroke-dasharray="140 60" />
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0A4D8C" />
+            <stop offset="1" stop-color="#00C2FF" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="loader__text">CPA Growth Foundation</span>
+    </div>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===== MOUSE-FOLLOW GRADIENT ===== -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__container">
+      <a href="#home" class="nav__brand" aria-label="CPA Growth Foundation home">
+        <span class="nav__logo" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="36" height="36">
+            <rect x="2" y="2" width="36" height="36" rx="11" fill="url(#bg-grad)" />
+            <path d="M13 25 L18 19 L23 23 L28 14" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="28" cy="14" r="2.4" fill="#00C2FF" />
+            <defs>
+              <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0A4D8C" />
+                <stop offset="1" stop-color="#1E88E5" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="nav__brand-text">
+          <strong>CPA Growth</strong>
+          <small>Foundation</small>
+        </span>
+      </a>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#impact" class="nav__link">Impact</a>
+        <a href="#programs" class="nav__link">Programs</a>
+        <a href="#membership" class="nav__link">Membership</a>
+        <a href="#events" class="nav__link">Events</a>
+        <a href="#resources" class="nav__link">Resources</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/><line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/><line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/></g></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+        </button>
+        <a href="#membership" class="btn btn--primary nav__cta">Join Us</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="shape shape--1"></span>
+        <span class="shape shape--2"></span>
+        <span class="shape shape--3"></span>
+        <span class="shape shape--4"></span>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="container hero__container">
+        <div class="hero__content reveal">
+          <span class="badge"><span class="badge__dot"></span> Nonprofit • Trusted by accounting professionals</span>
+          <h1 class="hero__title">
+            Empowering CPA Firms to <span class="gradient-text">Start, Grow &amp; Succeed</span>
+          </h1>
+          <p class="hero__subtitle">
+            CPA Growth Foundation is a nonprofit dedicated to helping new and growing CPA firms thrive — through
+            <span class="typed" id="typed" aria-live="polite"></span>
+          </p>
+          <div class="hero__actions">
+            <a href="#membership" class="btn btn--primary btn--lg">Become a Member
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#programs" class="btn btn--ghost btn--lg">Explore Programs</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <strong class="counter" data-target="5000" data-suffix="+">0</strong>
+              <span>Future Member Firms</span>
+            </div>
+            <div class="hero__stat">
+              <strong class="counter" data-target="100" data-suffix="+">0</strong>
+              <span>Resources</span>
+            </div>
+            <div class="hero__stat">
+              <strong class="counter" data-target="20" data-suffix="+">0</strong>
+              <span>Core Programs</span>
+            </div>
+            <div class="hero__stat">
+              <strong class="counter" data-target="100" data-suffix="+">0</strong>
+              <span>Mentors</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="glass-card hero__card hero__card--main">
+            <div class="hero__card-head">
+              <span class="hero__card-title">Firm Growth Dashboard</span>
+              <span class="pill pill--live"><span></span>Live</span>
+            </div>
+            <div class="hero__chart">
+              <svg viewBox="0 0 320 160" preserveAspectRatio="none" width="100%" height="160">
+                <defs>
+                  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#1E88E5" stop-opacity="0.35"/>
+                    <stop offset="1" stop-color="#1E88E5" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,130 C40,120 60,90 90,95 C130,100 150,50 190,55 C230,60 250,25 320,18 L320,160 L0,160 Z" fill="url(#area)"/>
+                <path class="hero__line" d="M0,130 C40,120 60,90 90,95 C130,100 150,50 190,55 C230,60 250,25 320,18" fill="none" stroke="#1E88E5" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="hero__metrics">
+              <div><small>Revenue</small><b>+38%</b></div>
+              <div><small>New Clients</small><b>+126</b></div>
+              <div><small>Retention</small><b>94%</b></div>
+            </div>
+          </div>
+
+          <div class="glass-card hero__card hero__card--float hero__card--a">
+            <span class="hero__mini-icon" style="--c:#00C2FF">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div><b>100+ Mentors</b><small>Ready to guide you</small></div>
+          </div>
+
+          <div class="glass-card hero__card hero__card--float hero__card--b">
+            <span class="hero__mini-icon" style="--c:#1E88E5">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01l-3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div><b>20+ Programs</b><small>Built for growth</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0,40 C360,90 720,0 1080,30 C1260,45 1380,60 1440,55 L1440,90 L0,90 Z"/></svg>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BAR / PARTNERS MINI ===== -->
+    <section class="trustbar" aria-label="Our partners">
+      <div class="container">
+        <p class="trustbar__label">Backed by a growing network of professional partners</p>
+        <div class="trustbar__track" id="trustTrack">
+          <span>Accounting Software</span><span>National Banks</span><span>Insurance Providers</span>
+          <span>Universities</span><span>Technology Companies</span><span>Payroll Platforms</span>
+          <span>Accounting Software</span><span>National Banks</span><span>Insurance Providers</span>
+          <span>Universities</span><span>Technology Companies</span><span>Payroll Platforms</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">About the Foundation</span>
+          <h2 class="section__title">Why we exist — and where we're going</h2>
+          <p class="section__lead">We believe every dedicated CPA deserves the tools, mentorship, and community to build a thriving, independent firm. We close that gap.</p>
+        </header>
+
+        <div class="about__grid">
+          <article class="glass-card feature-card reveal">
+            <span class="feature-card__icon" style="--c:#0A4D8C">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Our Mission</h3>
+            <p>To empower new and growing CPA firms with the education, mentorship, technology, and resources they need to launch confidently and scale sustainably.</p>
+          </article>
+
+          <article class="glass-card feature-card reveal">
+            <span class="feature-card__icon" style="--c:#1E88E5">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </span>
+            <h3>Our Vision</h3>
+            <p>A profession where independent CPA firms of every size flourish — supported by a generous community that shares knowledge, opportunity, and growth.</p>
+          </article>
+
+          <article class="glass-card feature-card reveal">
+            <span class="feature-card__icon" style="--c:#00C2FF">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Core Values</h3>
+            <p>Integrity, generosity, excellence, and community. We lead with service and measure success by the firms we help build.</p>
+          </article>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline reveal">
+          <h3 class="timeline__title">Our journey</h3>
+          <div class="timeline__track">
+            <div class="timeline__item">
+              <span class="timeline__dot"></span>
+              <span class="timeline__year">2021</span>
+              <h4>Founded</h4>
+              <p>Launched to support solo CPAs taking their first step toward independence.</p>
+            </div>
+            <div class="timeline__item">
+              <span class="timeline__dot"></span>
+              <span class="timeline__year">2022</span>
+              <h4>Mentorship Network</h4>
+              <p>Built a network of 100+ experienced mentors guiding emerging firms.</p>
+            </div>
+            <div class="timeline__item">
+              <span class="timeline__dot"></span>
+              <span class="timeline__year">2024</span>
+              <h4>Resource Center</h4>
+              <p>Released 100+ templates, SOPs, and toolkits for member firms.</p>
+            </div>
+            <div class="timeline__item">
+              <span class="timeline__dot"></span>
+              <span class="timeline__year">2026</span>
+              <h4>National Reach</h4>
+              <p>Growing toward 5,000+ member firms across the country.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IMPACT ===== -->
+    <section class="section section--tint" id="impact">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Our Impact</span>
+          <h2 class="section__title">Real momentum for real firms</h2>
+          <p class="section__lead">Every number represents a CPA building something of their own — with our community behind them.</p>
+        </header>
+
+        <div class="impact__grid">
+          <div class="glass-card impact-card reveal">
+            <strong class="counter" data-target="5000" data-suffix="+">0</strong>
+            <span>Member Growth</span>
+          </div>
+          <div class="glass-card impact-card reveal">
+            <strong class="counter" data-target="120" data-suffix="+">0</strong>
+            <span>Mentors</span>
+          </div>
+          <div class="glass-card impact-card reveal">
+            <strong class="counter" data-target="100" data-suffix="+">0</strong>
+            <span>Resources</span>
+          </div>
+          <div class="glass-card impact-card reveal">
+            <strong class="counter" data-target="80" data-suffix="+">0</strong>
+            <span>Events Hosted</span>
+          </div>
+          <div class="glass-card impact-card reveal">
+            <strong class="counter" data-target="45" data-suffix="+">0</strong>
+            <span>Partnerships</span>
+          </div>
+          <div class="glass-card impact-card reveal">
+            <strong class="counter" data-target="320" data-suffix="+">0</strong>
+            <span>Success Stories</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CORE PROGRAMS ===== -->
+    <section class="section" id="programs">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Core Programs</span>
+          <h2 class="section__title">20+ programs designed for every stage</h2>
+          <p class="section__lead">From launching your firm to building a leadership team — explore the programs that move you forward.</p>
+        </header>
+
+        <div class="programs__grid" id="programsGrid">
+          <!-- Cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WEBSITE DEVELOPMENT PROGRAM ===== -->
+    <section class="section section--dark" id="web-program">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow eyebrow--light">Spotlight Program</span>
+          <h2 class="section__title">Website Development Program</h2>
+          <p class="section__lead section__lead--light">A complete digital presence for your firm — designed, built, and optimized to win clients online.</p>
+        </header>
+
+        <div class="webdev__grid" id="webdevGrid">
+          <!-- Cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MEMBERSHIP ===== -->
+    <section class="section section--tint" id="membership">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Membership</span>
+          <h2 class="section__title">Find your place in the community</h2>
+          <p class="section__lead">Whether you're starting out, giving back, or partnering with us — there's a role for you.</p>
+        </header>
+
+        <div class="membership__grid">
+          <article class="glass-card member-card reveal">
+            <span class="member-card__icon" style="--c:#0A4D8C"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+            <h3>Member</h3>
+            <p class="member-card__role">For new &amp; growing CPA firms</p>
+            <div class="member-card__block"><h4>Benefits</h4><ul><li>Full resource library access</li><li>Mentor matching</li><li>Member-only events</li></ul></div>
+            <div class="member-card__block"><h4>Responsibilities</h4><ul><li>Engage with the community</li><li>Share your growth journey</li></ul></div>
+            <button class="btn btn--primary btn--block js-apply" data-role="Member">Apply</button>
+          </article>
+
+          <article class="glass-card member-card member-card--featured reveal">
+            <span class="member-card__badge">Most Impactful</span>
+            <span class="member-card__icon" style="--c:#1E88E5"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <h3>Mentor</h3>
+            <p class="member-card__role">For experienced CPAs &amp; firm owners</p>
+            <div class="member-card__block"><h4>Benefits</h4><ul><li>Give back to the profession</li><li>Expand your network</li><li>Recognition &amp; awards</li></ul></div>
+            <div class="member-card__block"><h4>Responsibilities</h4><ul><li>Guide assigned firms</li><li>Host periodic sessions</li></ul></div>
+            <button class="btn btn--primary btn--block js-apply" data-role="Mentor">Apply</button>
+          </article>
+
+          <article class="glass-card member-card reveal">
+            <span class="member-card__icon" style="--c:#00C2FF"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <h3>Volunteer</h3>
+            <p class="member-card__role">For those who want to serve</p>
+            <div class="member-card__block"><h4>Benefits</h4><ul><li>Make a direct impact</li><li>Build relationships</li><li>Volunteer recognition</li></ul></div>
+            <div class="member-card__block"><h4>Responsibilities</h4><ul><li>Support events &amp; outreach</li><li>Contribute your skills</li></ul></div>
+            <button class="btn btn--primary btn--block js-apply" data-role="Volunteer">Apply</button>
+          </article>
+
+          <article class="glass-card member-card reveal">
+            <span class="member-card__icon" style="--c:#0A4D8C"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>Corporate Partner</h3>
+            <p class="member-card__role">For companies serving CPAs</p>
+            <div class="member-card__block"><h4>Benefits</h4><ul><li>Reach thousands of firms</li><li>Brand visibility</li><li>Co-hosted programs</li></ul></div>
+            <div class="member-card__block"><h4>Responsibilities</h4><ul><li>Provide member value</li><li>Support the mission</li></ul></div>
+            <button class="btn btn--primary btn--block js-apply" data-role="Corporate Partner">Apply</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY JOIN US ===== -->
+    <section class="section" id="why">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Why Join Us</span>
+          <h2 class="section__title">A clear path from launch to leadership</h2>
+          <p class="section__lead">Follow a proven growth journey, supported at every milestone.</p>
+        </header>
+
+        <div class="roadmap reveal">
+          <div class="roadmap__step">
+            <span class="roadmap__num">1</span>
+            <h3>Community</h3>
+            <p>Join a welcoming network of CPAs who share your ambitions.</p>
+          </div>
+          <div class="roadmap__step">
+            <span class="roadmap__num">2</span>
+            <h3>Mentorship</h3>
+            <p>Get matched with a mentor who's built the firm you want.</p>
+          </div>
+          <div class="roadmap__step">
+            <span class="roadmap__num">3</span>
+            <h3>Networking</h3>
+            <p>Build referral relationships at events and online.</p>
+          </div>
+          <div class="roadmap__step">
+            <span class="roadmap__num">4</span>
+            <h3>Business Growth</h3>
+            <p>Apply proven systems to scale revenue and impact.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EVENTS ===== -->
+    <section class="section section--tint" id="events">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Events</span>
+          <h2 class="section__title">Upcoming events &amp; gatherings</h2>
+          <p class="section__lead">Learn, connect, and celebrate with the community throughout the year.</p>
+        </header>
+
+        <div class="events__grid">
+          <article class="glass-card event-card reveal">
+            <div class="event-card__date"><span class="event-card__day">14</span><span class="event-card__mon">JUL</span></div>
+            <div class="event-card__body"><span class="tag">Conference</span><h3>Annual Growth Conference</h3><p>Two days of keynotes, workshops, and connection for firm owners.</p><span class="event-card__meta">Downtown Convention Center • 9:00 AM</span></div>
+          </article>
+          <article class="glass-card event-card reveal">
+            <div class="event-card__date"><span class="event-card__day">02</span><span class="event-card__mon">AUG</span></div>
+            <div class="event-card__body"><span class="tag">Networking</span><h3>CPA Networking Mixer</h3><p>Meet peers, mentors, and partners in a relaxed evening setting.</p><span class="event-card__meta">Skyline Rooftop • 6:30 PM</span></div>
+          </article>
+          <article class="glass-card event-card reveal">
+            <div class="event-card__date"><span class="event-card__day">23</span><span class="event-card__mon">AUG</span></div>
+            <div class="event-card__body"><span class="tag">Wellness</span><h3>Community Hiking Day</h3><p>Recharge in nature with fellow members and their families.</p><span class="event-card__meta">Ridgeline Trails • 8:00 AM</span></div>
+          </article>
+          <article class="glass-card event-card reveal">
+            <div class="event-card__date"><span class="event-card__day">13</span><span class="event-card__mon">SEP</span></div>
+            <div class="event-card__body"><span class="tag">Family</span><h3>Family Day in the Park</h3><p>A relaxed day of food, games, and community for all ages.</p><span class="event-card__meta">Riverside Park • 11:00 AM</span></div>
+          </article>
+          <article class="glass-card event-card reveal">
+            <div class="event-card__date"><span class="event-card__day">04</span><span class="event-card__mon">OCT</span></div>
+            <div class="event-card__body"><span class="tag">Volunteer</span><h3>Community Volunteer Drive</h3><p>Give back together through local service projects.</p><span class="event-card__meta">City Community Center • 9:00 AM</span></div>
+          </article>
+          <article class="glass-card event-card reveal">
+            <div class="event-card__date"><span class="event-card__day">15</span><span class="event-card__mon">NOV</span></div>
+            <div class="event-card__body"><span class="tag">Gala</span><h3>Excellence Awards Gala</h3><p>Celebrating outstanding firms, mentors, and partners of the year.</p><span class="event-card__meta">Grand Ballroom • 7:00 PM</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SUCCESS STORIES ===== -->
+    <section class="section" id="stories">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Success Stories</span>
+          <h2 class="section__title">Firms growing with us</h2>
+          <p class="section__lead">Real results from real members of the CPA Growth Foundation community.</p>
+        </header>
+
+        <div class="stories__grid">
+          <article class="glass-card story-card reveal">
+            <div class="story-card__video" role="img" aria-label="Video testimonial placeholder">
+              <button class="story-card__play" aria-label="Play testimonial"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
+            </div>
+            <p class="story-card__quote">"Within a year I doubled my client base and finally hired my first associate. The mentorship was the turning point."</p>
+            <div class="story-card__author"><span class="avatar">MR</span><div><b>Maria Rodriguez</b><small>Rodriguez CPA, LLC</small></div></div>
+          </article>
+          <article class="glass-card story-card reveal">
+            <div class="story-card__video" role="img" aria-label="Video testimonial placeholder">
+              <button class="story-card__play" aria-label="Play testimonial"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
+            </div>
+            <p class="story-card__quote">"The website program gave my firm a professional presence overnight. I now get inbound leads every week."</p>
+            <div class="story-card__author"><span class="avatar">JC</span><div><b>James Chen</b><small>Chen Accounting Group</small></div></div>
+          </article>
+          <article class="glass-card story-card reveal">
+            <div class="story-card__video" role="img" aria-label="Video testimonial placeholder">
+              <button class="story-card__play" aria-label="Play testimonial"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
+            </div>
+            <p class="story-card__quote">"The referral network alone paid for itself many times over. This community genuinely wants you to win."</p>
+            <div class="story-card__author"><span class="avatar">AP</span><div><b>Aisha Patel</b><small>Patel &amp; Co. CPAs</small></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PARTNERS ===== -->
+    <section class="section section--tint" id="partners">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Partners</span>
+          <h2 class="section__title">Trusted partners powering our mission</h2>
+        </header>
+        <div class="partners__carousel">
+          <div class="partners__track" id="partnersTrack"><!-- injected --></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESOURCES ===== -->
+    <section class="section" id="resources">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Resources</span>
+          <h2 class="section__title">A library built to save you time</h2>
+          <p class="section__lead">Download practical, ready-to-use templates and toolkits — free for members.</p>
+        </header>
+
+        <div class="resources__grid" id="resourcesGrid"><!-- injected --></div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--tint" id="faq">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section__title">Questions, answered</h2>
+        </header>
+        <div class="accordion" id="accordion"><!-- injected --></div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="section__title">Let's build your firm's future</h2>
+          <p class="section__lead">Reach out — we'd love to learn about your goals and how we can help.</p>
+        </header>
+
+        <div class="contact__grid">
+          <form class="glass-card contact__form reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="cf-name">Full name</label>
+              <input id="cf-name" name="name" type="text" required placeholder="Jane Smith" />
+            </div>
+            <div class="field">
+              <label for="cf-email">Email address</label>
+              <input id="cf-email" name="email" type="email" required placeholder="jane@firm.com" />
+            </div>
+            <div class="field">
+              <label for="cf-subject">Subject</label>
+              <input id="cf-subject" name="subject" type="text" placeholder="I'd like to learn about membership" />
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="4" required placeholder="Tell us a little about your firm..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">Send Message</button>
+            <p class="form-success" id="contactSuccess" hidden>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Thank you! We'll be in touch shortly.
+            </p>
+          </form>
+
+          <div class="contact__info reveal">
+            <div class="glass-card contact__card">
+              <div class="contact__map" role="img" aria-label="Map location placeholder">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Find us on the map</span>
+              </div>
+              <ul class="contact__list">
+                <li><strong>Email</strong><a href="mailto:hello@cpagrowthfoundation.org">hello@cpagrowthfoundation.org</a></li>
+                <li><strong>Phone</strong><a href="tel:+18005550123">+1 (800) 555-0123</a></li>
+                <li><strong>Office Hours</strong><span>Mon–Fri, 9:00 AM – 6:00 PM</span></li>
+              </ul>
+              <div class="contact__social">
+                <a href="#" aria-label="LinkedIn" class="social"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="currentColor"/></svg></a>
+                <a href="#" aria-label="Twitter" class="social"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M23 4.3a8.2 8.2 0 0 1-2.36.65A4.1 4.1 0 0 0 22.4 2.7a8.2 8.2 0 0 1-2.6 1A4.1 4.1 0 0 0 12.8 7.5a11.6 11.6 0 0 1-8.45-4.3 4.1 4.1 0 0 0 1.27 5.5A4 4 0 0 1 3.8 8.2v.05a4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.85.07 4.1 4.1 0 0 0 3.83 2.85A8.3 8.3 0 0 1 2 16.9a11.6 11.6 0 0 0 6.29 1.84c7.55 0 11.67-6.25 11.67-11.67v-.53A8.3 8.3 0 0 0 23 4.3z" fill="currentColor"/></svg></a>
+                <a href="#" aria-label="Facebook" class="social"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="currentColor"/></svg></a>
+                <a href="#" aria-label="Instagram" class="social"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="glass-card cta-banner__inner reveal">
+          <div>
+            <h2>Ready to start, grow &amp; succeed?</h2>
+            <p>Join thousands of CPAs building thriving firms with the support of our community.</p>
+          </div>
+          <div class="cta-banner__actions">
+            <a href="#membership" class="btn btn--primary btn--lg">Become a Member</a>
+            <button class="btn btn--ghost btn--lg js-brochure">Download Brochure</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="nav__brand">
+          <span class="nav__logo" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="34" height="34"><rect x="2" y="2" width="36" height="36" rx="11" fill="url(#bg-grad2)"/><path d="M13 25 L18 19 L23 23 L28 14" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="14" r="2.4" fill="#00C2FF"/><defs><linearGradient id="bg-grad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A4D8C"/><stop offset="1" stop-color="#1E88E5"/></linearGradient></defs></svg>
+          </span>
+          <span class="nav__brand-text"><strong>CPA Growth</strong><small>Foundation</small></span>
+        </a>
+        <p class="footer__tag">Empowering CPA Firms to Start, Grow &amp; Succeed.</p>
+        <form class="footer__newsletter" id="footerNewsletter">
+          <label for="nl-email" class="sr-only">Email for newsletter</label>
+          <input id="nl-email" type="email" placeholder="Your email" required />
+          <button type="submit" class="btn btn--primary" aria-label="Subscribe">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+        <span class="footer__nl-note" id="nlNote" hidden>You're subscribed — thank you!</span>
+      </div>
+
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a><a href="#impact">Impact</a><a href="#why">Why Join</a><a href="#events">Events</a><a href="#contact">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Programs</h4>
+        <a href="#programs">CPA Launch</a><a href="#programs">Mentorship</a><a href="#web-program">Website Development</a><a href="#programs">Leadership Academy</a><a href="#programs">Scholarships</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="#resources">Templates</a><a href="#resources">SOPs</a><a href="#resources">Toolkits</a><a href="#resources">Marketing Kits</a><a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> CPA Growth Foundation. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="#">Privacy Policy</a><a href="#">Terms of Service</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING ACTION BUTTONS ===== -->
+  <button class="fab fab--top" id="backToTop" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M18 15l-6-6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="fab fab--join" id="fabJoin" aria-label="Join the foundation">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <span>Join Us</span>
+  </button>
+
+  <!-- ===== MODAL (Registration / Apply) ===== -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__dialog glass-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+      <h3 id="modalTitle" class="modal__title">Join CPA Growth Foundation</h3>
+      <p class="modal__sub" id="modalSub">Complete the form and our team will reach out shortly.</p>
+
+      <form id="modalForm" class="modal__form" novalidate>
+        <div class="field"><label for="m-name">Full name</label><input id="m-name" type="text" required placeholder="Jane Smith" /></div>
+        <div class="field"><label for="m-email">Email</label><input id="m-email" type="email" required placeholder="jane@firm.com" /></div>
+        <div class="field"><label for="m-firm">Firm name</label><input id="m-firm" type="text" placeholder="Your firm" /></div>
+        <div class="field">
+          <label for="m-role">I'm applying as</label>
+          <select id="m-role"><option>Member</option><option>Mentor</option><option>Volunteer</option><option>Corporate Partner</option></select>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Submit Application</button>
+      </form>
+
+      <div class="modal__success" id="modalSuccess" hidden>
+        <span class="modal__check"><svg viewBox="0 0 24 24" width="40" height="40"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Application received!</h3>
+        <p>Welcome to the community. We'll be in touch very soon.</p>
+        <button class="btn btn--primary" data-close>Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NEWSLETTER POPUP ===== -->
+  <div class="popup" id="newsletterPopup" aria-hidden="true">
+    <div class="popup__card glass-card">
+      <button class="popup__close" id="popupClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+      <span class="popup__icon"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 4h16v16H4zM4 6l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <h3>Get growth tips for your firm</h3>
+      <p>Join our newsletter for practical resources, event invites, and member stories.</p>
+      <form id="popupForm">
+        <input type="email" placeholder="Your email address" required aria-label="Email" />
+        <button type="submit" class="btn btn--primary btn--block">Subscribe</button>
+      </form>
+      <small class="popup__note">No spam. Unsubscribe anytime.</small>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
